@@ -16,6 +16,9 @@ Route::get('about', 'PagesController@getAbout');
 
 Route::get('/', 'PagesController@getIndex');
 
+Route::get('create', 'PagesController@getPost');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::resource('post', 'PostController');

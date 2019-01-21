@@ -29,5 +29,10 @@ class PagesController extends Controller
     {
         return view('pages.contact');
     }
+    
+    public function getPost()
+    {
+        return view('posts.create');
+    }
 }
 
