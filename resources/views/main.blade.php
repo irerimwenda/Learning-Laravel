@@ -11,12 +11,14 @@
 
             <div class="content">
 
+            @include('partials._messages')
+
                 @yield('content')
 
                 @include('partials._footer')
             </div>
 
-        </div>
+        
         @yield('scripts')
     </body>
 </html>
