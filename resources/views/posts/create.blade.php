@@ -4,8 +4,8 @@
 
 @include('partials._css')
 
-<div class="row">
-    <div class="col-md-8 col-md-offset-2">
+<div class="create-post row">
+    <div class="col-md-8 col-md-offset-2 mx-auto">
         
         <h1>Create New Post</h1>
         <hr>

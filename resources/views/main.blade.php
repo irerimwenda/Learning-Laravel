@@ -3,6 +3,8 @@
 
     <head>
     @include('partials._head')
+    
+    @include('partials._css')
     </head>
 
     <body>
@@ -20,5 +22,8 @@
 
         
         @yield('scripts')
+
+        @include('partials._javascript')
+
     </body>
 </html>

@@ -2,11 +2,10 @@
 
 @section('title', '|View Post')
 
-@include('partials._css')
 
 @section('content')
 
-<div class="row">
+<div style="margin-top:80px" class="row">
 
 <div class="col-md-8">
 
@@ -32,11 +31,11 @@
 
         <div class="row">
             <div class="col-sm-6">
-                    <a href="" class="btn btn-info">Edit</a>
+                    {!! Html::linkRoute('post.edit', 'Edit', array($post->id), array('class' => 'btn btn-info')) !!}
             </div>
 
             <div class="col-sm-6">
-                    <a href="" class="btn btn-danger">Delete</a>
+                    {!! Html::linkRoute('post.destroy', 'Delete', array($post->id), array('class' => 'btn btn-danger')) !!}
             </div>
         </div>
        
@@ -48,6 +47,4 @@
 
 
 
-@endsection()
-
-@include('partials._javascript')
+@stop()
