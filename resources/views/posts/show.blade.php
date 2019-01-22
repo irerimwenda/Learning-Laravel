@@ -35,7 +35,11 @@
             </div>
 
             <div class="col-sm-6">
-                    {!! Html::linkRoute('post.destroy', 'Delete', array($post->id), array('class' => 'btn btn-danger')) !!}
+                {!! Form::open(['route' => ['post.destroy', $post->id], 'method'=>'DELETE']) !!}
+
+                {{ Form::submit('Delete', ['class' => 'btn btn-danger']) }}
+
+                {!! Form::close() !!}
             </div>
         </div>
        
