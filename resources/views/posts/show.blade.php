@@ -5,7 +5,9 @@
 
 @section('content')
 
+
 <div style="margin-top:80px" class="row">
+
 
 <div class="col-md-8">
 
