@@ -20,6 +20,11 @@
     <div class="well">
 
     <dl class="dl-horizantal">
+        <dt>Url:</dt>
+        <dd><a href="{{ url($post->slug) }}">{{ url($post->slug) }}</a></dd>
+    </dl>
+
+    <dl class="dl-horizantal">
         <dt>Created At</dt>
         <dd>{{date('M j, Y h:i a', strtotime($post->created_at))}}</dd>
     </dl>
@@ -33,7 +38,7 @@
 
         <div class="row">
             <div class="col-sm-6">
-                    {!! Html::linkRoute('post.edit', 'Edit', array($post->id), array('class' => 'btn btn-info')) !!}
+                    {!! Html::linkRoute('post.edit', 'Edit', array($post->id), array('class' => 'btn btn-lg btn-info')) !!}
             </div>
 
             <div class="col-sm-6">
@@ -47,7 +52,7 @@
 
         <div class="row">
             <div class="col-md-12">
-                {{ Html::linkRoute('post.index', '<< See All Posts', [], ['class' => 'btn btn-warning']) }}
+                {{ Html::linkRoute('post.index', '<< See All Posts', [], ['class' => 'btn  btn-warning']) }}
             </div>
         </div>
        
