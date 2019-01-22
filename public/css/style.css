@@ -41,7 +41,7 @@
             /**END OF THAT**/
             .jumbotron{
                 background: #F2F3F4;
-                height:250px;
+                height:290px;
                 margin:30px;
             }
 
@@ -99,7 +99,7 @@
                 width:100%;
             }
             .email-now{
-                height: 20px;
+                height: 40px;
                 width: 400px;
                 border-radius: 10px;
                 padding: 9px;
@@ -107,7 +107,7 @@
             }
             .send-mail-btn{
                 height:40px;
-                width: 100px;
+                width: 150px;
                 color: #fff;
                 background: #616A6B;
                 padding: 5px;
@@ -126,4 +126,9 @@
             }
             .form-spacing-top{
                 margin-top: 30px;
+            }
+            .edit-section{
+                margin:0 30px 30px 30px;
+                text-align: left;
+                font-weight: bold;
             }

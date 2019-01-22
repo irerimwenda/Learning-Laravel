@@ -21,15 +21,15 @@
                     <form>
 
                         <div class="okay-email">
-                        <input class="email-now" placeholder="Email" class="email" type="text">
+                        <input class="email-now" placeholder="Email" type="text">
                         </div>
 
                         <div class="okay-email">
-                        <input class="email-now" placeholder="Subject" class="email" type="text">
+                        <input class="email-now" placeholder="Subject" type="text">
                         </div>
                         
                         <div class="okay-email">
-                        <input class="email-now" placeholder="Message" class="email" type="text">
+                        <input class="email-now" placeholder="Message" type="text">
                         </div>
 
                         <button class="send-mail-btn">Send Message</button>

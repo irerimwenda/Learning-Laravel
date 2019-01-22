@@ -6,9 +6,11 @@
 
 <div style="margin-top:80px" class="row">
 
-{!! Form::model($post, ['route' => ['post.update', $post->id], 'method'=>'PUT']) !!}
 
-<div class="col-md-8">
+
+<div class="edit-section col-md-7">
+
+{!! Form::model($post, ['route' => ['post.update', $post->id], 'method'=>'PUT']) !!}
 
 {{ Form::label('title', 'Title:')}}
 {{ Form::text('title', null, ["class" => 'form-control input-lg']) }}
