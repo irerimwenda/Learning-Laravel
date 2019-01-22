@@ -122,5 +122,8 @@
 
             .create-post{
                 margin-top: 80px;
+                padding:25px;
             }
-            
+            .form-spacing-top{
+                margin-top: 30px;
+            }
