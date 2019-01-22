@@ -44,6 +44,12 @@
                 {!! Form::close() !!}
             </div>
         </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                {{ Html::linkRoute('post.index', '<< See All Posts', [], ['class' => 'btn btn-warning']) }}
+            </div>
+        </div>
        
 
 </div>

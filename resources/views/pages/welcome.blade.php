@@ -31,54 +31,17 @@
             <div class="row">
 
                 <div class="column left">
+
+                    @foreach($posts as $post)
+
                     <div class="blog-content">
-                        <div class="blog-title">Lesson 1</div>
-                        <p>This is the new lesson man. You have to get it right and then do as I tell you. Laravel works in an M-V-C patter architectural design. Well that's first thing to note</p>
-                        <button class="read-more">Read More</button>
+                        <div class="blog-title">{{ $post->title }}</div>
+                        <p>{{ substr($post->body, 0, 300) }} {{ strlen($post->body) > 300 ? "..." : "" }}</p>
+                        <button href="" class="read-more">Read More</button>
                         <hr>
                     </div>
 
-                    <div class="blog-content">
-                        <div class="blog-title">Lesson 1</div>
-                        <p>This is the new lesson man. You have to get it right and then do as I tell you. Laravel works in an M-V-C patter architectural design. Well that's first thing to note</p>
-                        <button class="read-more">Read More</button>
-                        <hr>
-                    </div>
-
-                    <div class="blog-content">
-                        <div class="blog-title">Lesson 1</div>
-                        <p>This is the new lesson man. You have to get it right and then do as I tell you. Laravel works in an M-V-C patter architectural design. Well that's first thing to note</p>
-                        <button class="read-more">Read More</button>
-                        <hr>
-                    </div>
-
-                    <div class="blog-content">
-                        <div class="blog-title">Lesson 1</div>
-                        <p>This is the new lesson man. You have to get it right and then do as I tell you. Laravel works in an M-V-C patter architectural design. Well that's first thing to note</p>
-                        <button class="read-more">Read More</button>
-                        <hr>
-                    </div>
-
-                    <div class="blog-content">
-                        <div class="blog-title">Lesson 1</div>
-                        <p>This is the new lesson man. You have to get it right and then do as I tell you. Laravel works in an M-V-C patter architectural design. Well that's first thing to note</p>
-                        <button class="read-more">Read More</button>
-                        <hr>
-                    </div>
-
-                    <div class="blog-content">
-                        <div class="blog-title">Lesson 1</div>
-                        <p>This is the new lesson man. You have to get it right and then do as I tell you. Laravel works in an M-V-C patter architectural design. Well that's first thing to note</p>
-                        <button class="read-more">Read More</button>
-                        <hr>
-                    </div>
-
-                    <div class="blog-content">
-                        <div class="blog-title">Lesson 1</div>
-                        <p>This is the new lesson man. You have to get it right and then do as I tell you. Laravel works in an M-V-C patter architectural design. Well that's first thing to note</p>
-                        <button class="read-more">Read More</button>
-                        <hr>
-                    </div>
+                    @endforeach
 
                 </div>
 

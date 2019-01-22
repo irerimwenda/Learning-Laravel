@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Post;
 
 class PagesController extends Controller
 {
@@ -9,7 +10,10 @@ class PagesController extends Controller
         $first = "Brian";
         $mydata = [];
         $mydata['firstname'] = $first;
-        return view('pages.welcome')->withMydata($mydata);
+
+        $posts = Post::orderBy('created_at', 'desc')->limit(4)->get();
+
+        return view('pages.welcome')->withPosts($posts)->withMydata($mydata);
     }
 
     public function getAbout()
