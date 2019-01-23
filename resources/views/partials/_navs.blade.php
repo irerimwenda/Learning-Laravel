@@ -10,6 +10,8 @@
                  <a href="/home">Home</a>
 
                 <a href="{{route('post.index')}}">Posts</a>
+
+                <a href="{{route('categories.index')}}">Categories</a>
           
                 <a href="{{route('logout')}}">Logout</a>
 

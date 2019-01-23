@@ -137,3 +137,6 @@
             .text-center{
                 display: inline-block;
             }
+            .category-well{
+                padding:0 25px;
+            }
