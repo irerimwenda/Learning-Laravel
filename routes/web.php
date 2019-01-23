@@ -21,6 +21,8 @@ Route::get('/', 'PagesController@getIndex');
 
 Route::get('create', 'PagesController@getPost');
 
+Route::get('blog', ['uses' => 'BlogController@getIndex', 'as' => 'blog.index' ]);
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

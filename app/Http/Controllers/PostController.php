@@ -49,6 +49,7 @@ class PostController extends Controller
 
         //Store in DB
         $post = new Post;
+        
         $post->title = $request->title;
         $post->slug= $request->slug;
         $post->body = $request->body;
@@ -117,7 +118,7 @@ class PostController extends Controller
         $post = Post::find($id);
         
         $post->title = $request->input('title');
-        $post->slug - $request->input('slug');
+        $post->slug = $request->input('slug');
         $post->body = $request->input('body');
 
         $post->save();
