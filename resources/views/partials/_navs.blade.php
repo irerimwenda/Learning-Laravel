@@ -11,6 +11,7 @@
 
                 <a href="{{route('post.index')}}">Posts</a>
           
+                <a href="{{route('logout')}}">Logout</a>
 
                  @else
 
