@@ -37,7 +37,7 @@
                     <div class="blog-content">
                         <div class="blog-title">{{ $post->title }}</div>
                         <p>{{ substr($post->body, 0, 300) }} {{ strlen($post->body) > 300 ? "..." : "" }}</p>
-                        <button href="" class="read-more">Read More</button>
+                        <a href="{{url('blog/'.$post->slug)}}" class="read-more">Read More</a>
                         <hr>
                     </div>
 
