@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Post;
 use Session;
 use App\Category;
+use App\Tag;
 
 class PostController extends Controller
 {
@@ -36,7 +37,8 @@ class PostController extends Controller
     public function create()
     {
         $categories = Category::all();
-        return view('posts.create')->withCategories($categories);
+        $tags = Tag::all(); 
+        return view('posts.create')->withCategories($categories)->withTags($tags);
     }
 
     /**
@@ -47,6 +49,7 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
+
         //Validate
         $this->validate($request, array(
             'title' => 'required|max:150',
@@ -64,6 +67,8 @@ class PostController extends Controller
         $post->body = $request->body;
 
         $post->save();
+
+        $post->tags()->sync($request->tags, false);
 
         Session::flash('success', 'Blog post successfully posted');
 
@@ -99,8 +104,15 @@ class PostController extends Controller
             $cats[$category->id] = $category->name;
         }
 
-        //  Return the view and pass in the previousl created variable
-        return view('posts.edit')->withPost($post)->withCategories($cats);
+        $tags=Tag::all();
+        $tags2=array();
+        foreach($tags as $tag)
+        {
+            $tags2[$tag->id] = $tag->name;
+        }
+
+        //  Return the view and pass in the previously created variable
+        return view('posts.edit')->withPost($post)->withCategories($cats)->withTags($tags2);
     }
 
     /**
@@ -140,6 +152,13 @@ class PostController extends Controller
 
         $post->save();
 
+        if(isset($request->tags)){
+
+        $post->tags()->sync($request->tags, true);
+
+    }else{
+        $post->tags()->sync(array());
+    }
         //  Set Flash data with success message
         Session::flash('success', 'Post successfully updated!');
 
@@ -157,6 +176,7 @@ class PostController extends Controller
     {
         //DELETE FROM DB
         $post = Post::find($id);
+        $post->tags()->detach();
         $post->delete();
 
         Session::flash('success', 'Post successfully deleted');

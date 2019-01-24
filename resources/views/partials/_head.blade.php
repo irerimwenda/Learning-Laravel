@@ -10,5 +10,7 @@
         <!--Custom CSS-->
         {{Html::style('css/style.css')}}
 
+        {{Html::style('css/select2.min.css')}}
+
       
       

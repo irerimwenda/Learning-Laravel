@@ -53,7 +53,7 @@
         </table>
 
 <div class="text-center">
-    {!! $posts->links(); !!}
+    {!! $posts->render(); !!}
 </div>
 
     </div>
