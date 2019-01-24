@@ -15,6 +15,7 @@ Route::get('blog/{slug}', ['as' => 'blog.single', 'uses'=> 'BlogController@getSi
 ->where('slug', '[\w\d\-\_]+');
 
 Route::get('contact', 'PagesController@getContact');
+Route::post('contact', 'PagesController@postContact');
 
 Route::get('about', 'PagesController@getAbout'); 
 
@@ -38,3 +39,4 @@ Route::resource('tags', 'TagController', ['except'=>['create']]);
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+

@@ -118,6 +118,8 @@
                 border-radius: 10px;
                 margin-top: 30px;
             }
+            .send-mail-btn:focus {outline:none}
+            
             .okay-email{
                 margin-top: 15px;
             }
@@ -139,4 +141,15 @@
             }
             .category-well{
                 padding:0 25px;
+            }
+            .email-textarea{
+                border-radius: 10px;
+                padding: 10px;
+            }
+
+            input:focus,
+            select:focus,
+            textarea:focus,
+            button:focus {
+                outline: none;
             }

@@ -18,21 +18,23 @@
 
 
                  <div class="email-form">
-                    <form>
+
+                    <form action="{{ url('contact') }}" method="POST">
+                     {{csrf_field()}}
 
                         <div class="okay-email">
-                        <input class="email-now" placeholder="Email" type="text">
+                        <input name="email" class="email-now" placeholder="Email" type="email">
                         </div>
 
                         <div class="okay-email">
-                        <input class="email-now" placeholder="Subject" type="text">
+                        <input name="subject" class="email-now" placeholder="Subject" type="text">
                         </div>
                         
                         <div class="okay-email">
-                        <input class="email-now" placeholder="Message" type="text">
+                        <textarea name="message" class="email-textarea" rows="5" cols="52"  placeholder="Message..." type="text"></textarea>
                         </div>
 
-                        <button class="send-mail-btn">Send Message</button>
+                        <button type="submit" class="send-mail-btn">Send Message</button>
                     
                     </form>
                 </div>
