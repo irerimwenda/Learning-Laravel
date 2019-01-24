@@ -24,6 +24,11 @@
         <dd><a href="{{ url('blog/'.$post->slug) }}">{{ url('blog/'.$post->slug) }}</a></dd>
     </dl>
 
+     <dl class="dl-horizantal">
+        <dt>Category: </dt>
+        <dd><p> {{ $post->category->name }} </p></dd>
+    </dl>
+
     <dl class="dl-horizantal">
         <dt>Created At</dt>
         <dd>{{date('M j, Y h:i a', strtotime($post->created_at))}}</dd>
