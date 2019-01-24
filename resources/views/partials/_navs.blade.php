@@ -13,6 +13,8 @@
 
                 <a href="{{route('categories.index')}}">Categories</a>
           
+                <a href="{{route('tags.index')}}">Tags</a>
+
                 <a href="{{route('logout')}}">Logout</a>
 
                  @else
