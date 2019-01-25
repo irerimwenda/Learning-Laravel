@@ -23,7 +23,7 @@ tinymce.init({
 
 <div class="edit-section col-md-7">
 
-{!! Form::model($post, ['route' => ['post.update', $post->id], 'method'=>'PUT']) !!}
+{!! Form::model($post, ['route' => ['post.update', $post->id], 'method'=>'PUT', 'files' => true]) !!}
 
 {{ Form::label('title', 'Title:')}}
 {{ Form::text('title', null, ["class" => 'form-control input-lg']) }}
@@ -36,7 +36,10 @@ tinymce.init({
 
 {{Form::label('tags', 'Tags:', ['class' => 'form-spacing-top'])}}
 {{Form::select('tags[]', $tags, null, ['class'=>'form-control select2-multi', 'multiple'=>'multiple'])}}
-
+<br><br>
+{{Form::label('featured_image', 'Update featured image')}}
+{{Form::file('featured_image')}}
+<br>
 {{ Form::label('body', "Body:", ['class' => 'form-spacing-top']) }}
 {{ Form::textarea('body', null, ["class" => 'form-control']) }}
 

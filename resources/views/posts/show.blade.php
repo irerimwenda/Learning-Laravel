@@ -11,6 +11,8 @@
 
 <div class="col-md-8">
 
+<img style="width:250px;height:250px" src="{{asset('images/'.$post->image)}}" />
+
 <h1>{{ $post->title }}</h1>
 <p class="lead">{{ $post->body }}</p>
 
