@@ -4,6 +4,18 @@
 
 @include('partials._css')
 
+@section('stylesheets')
+<script src='https://cloud.tinymce.com/stable/tinymce.min.js'></script>
+
+
+<script>
+tinymce.init({
+  selector: 'textarea'
+});
+</script>
+
+@endsection()
+
 @section('content')
 
 <div class="create-post row">
@@ -12,7 +24,7 @@
         <h1>Create New Post</h1>
         <hr>
         
-        {!! Form::open(['route' => 'post.store', 'data-parsley-validate' =>'']) !!}
+        {!! Form::open(['route' => 'post.store', 'data-parsley-validate' =>'', 'files'=>true]) !!}
           {{ Form::label('title', 'Title:', ['style'=>'font-weight:bold']) }}
           {{ Form::text('title',null,array('class' => 'form-control', 'required' => '','maxlength' => '200'))}}
 
@@ -26,7 +38,7 @@
             <option value='{{$category->id}}'>{{$category->name}}</option>
             @endforeach
 
-          </select>
+          </select><br>
 
           {{ Form::label('tags', 'Tags:', ['style'=>'font-weight:bold'])}}
           <select class="form-control select2-multi" name="tags[]" multiple="multiple">
@@ -35,10 +47,13 @@
             <option value='{{$tag->id}}'>{{$tag->name}}</option>
             @endforeach
 
-          </select>
+          </select><br><br>
 
+          {{Form::label('featured_image', 'Upload featured image')}}
+          {{Form::file('featured_image')}}
+<br>
           {{ Form::label('body', "Post Body:", ['style'=>'font-weight:bold'])}}
-          {{ Form::textarea('body', null,array('class'=>'form-control', 'required' => ''))}}
+          {{ Form::textarea('body', null,array('class'=>'form-control'))}}
         
           {{ Form::submit('Create Post',array('class'=>'btn btn-info btn-lg', 'style'=>'margin-top:20px;'))}}
         {!! Form::close() !!}

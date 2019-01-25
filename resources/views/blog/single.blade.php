@@ -17,6 +17,9 @@
 
 <div class="row">
     <div class="col-md-8 col-md-offset-2 mx-auto">
+
+        <img src="{{ asset('images/' . $post->image) }}" height="250" width="250"/>
+
         <h3 style="margin-bottom:45px"><span class="fa fa-star"></span>{{ $post->comments()->count() }} Comments</h3>
         @foreach($post->comments as $comment)
 
