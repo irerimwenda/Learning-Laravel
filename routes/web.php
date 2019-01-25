@@ -40,3 +40,5 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+
+Route::post('comments/{post_d}', ['uses' => 'CommentsController@store', 'as' => 'comments.store']);
