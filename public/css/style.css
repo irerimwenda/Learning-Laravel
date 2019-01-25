@@ -153,3 +153,25 @@
             button:focus {
                 outline: none;
             }
+
+            .comment{
+                margin-bottom: 45px;
+            }
+
+            .author-image{
+                width: 50px;
+                height:50px;
+                border-radius: 50%;
+                float:left;
+            }
+            .author-name{
+                float:left;
+                margin: 0px;
+                margin-left: 9px;
+            }
+            .author-name>h4{
+                margin: 0px;
+            }
+            .comment-content{
+                clear: both;
+            }
