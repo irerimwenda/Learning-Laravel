@@ -175,3 +175,6 @@
             .comment-content{
                 clear: both;
             }
+            .comment-table{
+                margin-left: 10px;
+            }
